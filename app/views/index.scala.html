@@ -1,0 +1,31 @@
+@import item.Service
+@(result1: Map[String, Object])(result2: Map[String, Object])
+
+@main {
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <h5 class="card-header">Result without dividing Cost and Performance by 2</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">Best Fitness Value: @result1.get("bestScore")</h5>
+                        <p class="card-text">SC1: @result1.get("SC1").asInstanceOf[Service].getName()</p>
+                        <p class="card-text">SC2: @result1.get("SC2").asInstanceOf[Service].getName()</p>
+                        <p class="card-text">SC3: @result1.get("SC3").asInstanceOf[Service].getName()</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <h5 class="card-header">Result with dividing Cost and Performance by 2</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">Best Fitness Value: @result2.get("bestScore")</h5>
+                        <p class="card-text">SC1: @result2.get("SC1").asInstanceOf[Service].getName()</p>
+                        <p class="card-text">SC2: @result2.get("SC2").asInstanceOf[Service].getName()</p>
+                        <p class="card-text">SC3: @result2.get("SC3").asInstanceOf[Service].getName()</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
